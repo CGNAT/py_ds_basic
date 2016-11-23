@@ -1,0 +1,6 @@
+{
+  "name": "Python 資料科學實戰",
+  "tagline": "台大資工系系統訓練班 Python 資料科學實戰的教學專案",
+  "body": "### 簡介\r\n\r\n這是[郭耀仁](https://www.facebook.com/yaojen.kuo.1)在台灣大學資訊工程學系資訊系統訓練班所開設的 R 語言新手村課程網頁，課程時數 10 小時。\r\n\r\n### 課程大綱\r\n\r\n- 建立你的 Python 開發環境\r\n- 基礎 Python 資料型態\r\n- 基礎 Python 語法\r\n- 套件與函數\r\n- Numpy 套件\r\n- Matplotlib 套件\r\n- 使用 Pandas 套件進行資料探索（Exploratory Data Analysis）\r\n- 使用 Pandas 套件進行資料整理\r\n- 建立一個預測模型\r\n- 實戰演練\r\n\r\n### 課程錄影連結\r\nTBD",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
