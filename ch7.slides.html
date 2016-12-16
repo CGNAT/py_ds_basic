@@ -11833,6 +11833,92 @@ a.anchor-link {
 <h1 id="&#27969;&#31243;&#25511;&#21046;">&#27969;&#31243;&#25511;&#21046;<a class="anchor-link" href="#&#27969;&#31243;&#25511;&#21046;">&#182;</a></h1><h2 id="&#37101;&#32768;&#20161;">&#37101;&#32768;&#20161;<a class="anchor-link" href="#&#37101;&#32768;&#20161;">&#182;</a></h2>
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="if-else">if-else<a class="anchor-link" href="#if-else">&#182;</a></h2><ul>
+<li>Python 沒有像是 <code>switch</code> 或者 <code>case</code> 的分支結構</li>
+<li>透過 <code>if-else</code> 的結構創造程式的分支</li>
+<li>整數除以 2 的餘數只會有兩種答案</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">my_seq</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">iterator</span> <span class="ow">in</span> <span class="n">my_seq</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">iterator</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="s2">&quot;是偶數&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="s2">&quot;是奇數&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="if-elif-else">if-elif-else<a class="anchor-link" href="#if-elif-else">&#182;</a></h2><ul>
+<li>整數除以 3 的餘數會有三種答案</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">my_seq</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">iterator</span> <span class="ow">in</span> <span class="n">my_seq</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">iterator</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="s2">&quot;可以被 3 整除&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">iterator</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="s2">&quot;除以 3 餘數是 1&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="s2">&quot;除以 3 餘數是 2&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#35731;&#36852;&#22280;&#26356;&#26377;&#24392;&#24615;">&#35731;&#36852;&#22280;&#26356;&#26377;&#24392;&#24615;<a class="anchor-link" href="#&#35731;&#36852;&#22280;&#26356;&#26377;&#24392;&#24615;">&#182;</a></h2><ul>
+<li><code>break</code> 描述</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="n">ages</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">):</span>
+        <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#35731;&#36852;&#22280;&#26356;&#26377;&#24392;&#24615;&#65288;2&#65289;">&#35731;&#36852;&#22280;&#26356;&#26377;&#24392;&#24615;&#65288;2&#65289;<a class="anchor-link" href="#&#35731;&#36852;&#22280;&#26356;&#26377;&#24392;&#24615;&#65288;2&#65289;">&#182;</a></h2><ul>
+<li><code>continue</code> 描述</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="n">ages</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">):</span>
+        <span class="k">continue</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
 </div></section></section>
 </div>
 </div>
