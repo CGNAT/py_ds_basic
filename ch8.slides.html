@@ -11961,6 +11961,53 @@ a.anchor-link {
 
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;4&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;4&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;4&#65289;">&#182;</a></h2><ul>
+<li>交換排序法（exchange sorting）</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> <span class="c1"># 呼叫函數時使用隨機整數</span>
+
+<span class="c1"># 定義自訂函數</span>
+<span class="k">def</span> <span class="nf">exchange_sort</span><span class="p">(</span><span class="n">input_list</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39; # 多行的 docstrings</span>
+<span class="sd">    依據輸入的 list 與 reverse 參數排序 list 中的數字後回傳。</span>
+<span class="sd">    reverse 參數預設為 False 遞增排序，可以修改為 True 遞減排序。</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">input_list_cloned</span> <span class="o">=</span> <span class="n">input_list</span>
+    <span class="c1"># 遞增排序</span>
+    <span class="k">if</span> <span class="n">reverse</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)):</span>
+                <span class="c1"># 如果前一個數字比後一個數字大則交換位置</span>
+                <span class="k">if</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                    <span class="n">temp</span> <span class="o">=</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                    <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+                    <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
+    <span class="c1"># 遞減排序</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)):</span>
+                <span class="c1"># 如果前一個數字比後一個數字小則交換位置</span>
+                <span class="k">if</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                    <span class="n">temp</span> <span class="o">=</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                    <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+                    <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
+    <span class="k">return</span> <span class="n">input_list_cloned</span>
+
+<span class="c1"># 呼叫自訂函數</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span> <span class="c1"># 產生一組隨機數</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="c1"># 看看未排序前</span>
+<span class="k">print</span><span class="p">(</span><span class="n">exchange_sort</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span> <span class="c1"># 預設遞增排序</span>
+<span class="k">print</span><span class="p">(</span><span class="n">exchange_sort</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="bp">True</span><span class="p">))</span> <span class="c1"># 指定參數遞減排序</span>
+</pre></div>
+
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
