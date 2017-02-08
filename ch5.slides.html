@@ -11984,6 +11984,78 @@ a.anchor-link {
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#35712;&#21462;&#22806;&#37096;&#36039;&#26009;">&#35712;&#21462;&#22806;&#37096;&#36039;&#26009;<a class="anchor-link" href="#&#35712;&#21462;&#22806;&#37096;&#36039;&#26009;">&#182;</a></h2><ul>
+<li>使用 <code>pandas</code> 套件的 <code>.read_csv()</code> 方法讀取 csv 檔案</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://storage.googleapis.com/py_ds_basic/iris.csv&quot;</span> <span class="c1"># 在雲端上儲存了一份 csv 檔案</span>
+<span class="n">iris_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">iris_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#35712;&#21462;&#22806;&#37096;&#36039;&#26009;&#65288;2&#65289;">&#35712;&#21462;&#22806;&#37096;&#36039;&#26009;&#65288;2&#65289;<a class="anchor-link" href="#&#35712;&#21462;&#22806;&#37096;&#36039;&#26009;&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>使用 <code>pandas</code> 套件的 <code>.read_table()</code> 方法讀取 tsv 檔案</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://storage.googleapis.com/py_ds_basic/iris.tsv&quot;</span> <span class="c1"># 在雲端上儲存了一份 tsv 檔案</span>
+<span class="n">iris_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">iris_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#35712;&#21462;&#22806;&#37096;&#36039;&#26009;&#65288;3&#65289;">&#35712;&#21462;&#22806;&#37096;&#36039;&#26009;&#65288;3&#65289;<a class="anchor-link" href="#&#35712;&#21462;&#22806;&#37096;&#36039;&#26009;&#65288;3&#65289;">&#182;</a></h2><ul>
+<li>使用 <code>pandas</code> 套件的 <code>.read_excel()</code> 方法來讀取 excel 檔案</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://storage.googleapis.com/py_ds_basic/iris.xlsx&quot;</span> <span class="c1"># 在雲端上儲存了一份 Excel 試算表</span>
+<span class="n">iris_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">iris_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#35712;&#21462;&#22806;&#37096;&#36039;&#26009;&#65288;4&#65289;">&#35712;&#21462;&#22806;&#37096;&#36039;&#26009;&#65288;4&#65289;<a class="anchor-link" href="#&#35712;&#21462;&#22806;&#37096;&#36039;&#26009;&#65288;4&#65289;">&#182;</a></h2><ul>
+<li>使用 <code>pandas</code> 套件的 <code>.read_json()</code> 方法來讀取 JSON 檔案</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://storage.googleapis.com/py_ds_basic/data/iris.json&quot;</span> <span class="c1"># 在雲端上儲存了一份 JSON 檔</span>
+<span class="n">iris_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">iris_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
 </div></section></section>
 </div>
 </div>
