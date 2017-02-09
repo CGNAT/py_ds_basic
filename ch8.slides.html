@@ -11901,7 +11901,7 @@ a.anchor-link {
 <span class="sd">    Docstrings # 說明</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="c1"># 做些什麼事</span>
-    <span class="k">return</span> <span class="err">結果</span>
+    <span class="k">return</span> <span class="err">輸出</span>
 </pre></div>
 
 </div>
@@ -11982,14 +11982,14 @@ a.anchor-link {
     <span class="c1"># 遞增排序</span>
     <span class="k">if</span> <span class="n">reverse</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)):</span>
                 <span class="c1"># 如果前一個數字比後一個數字大則交換位置</span>
                 <span class="k">if</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
                     <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
     <span class="c1"># 遞減排序</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)):</span>
                 <span class="c1"># 如果前一個數字比後一個數字小則交換位置</span>
                 <span class="k">if</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
                     <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
