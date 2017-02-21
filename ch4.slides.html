@@ -11840,9 +11840,9 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#25105;&#20497;&#30340;&#21839;&#38988;">&#25105;&#20497;&#30340;&#21839;&#38988;<a class="anchor-link" href="#&#25105;&#20497;&#30340;&#21839;&#38988;">&#182;</a></h2><ul>
-<li>我想一次把半馬跟全馬的距離換算成英里</li>
+<li>我想一次把這幾個距離從公里換算成英里</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="n">km_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="mf">42.195</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><span class="n">km_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mf">42.195</span><span class="p">]</span>
 <span class="n">km_to_mile</span> <span class="o">=</span> <span class="mf">0.621371192</span>
 <span class="n">mile_list</span> <span class="o">=</span> <span class="n">km_list</span> <span class="o">*</span> <span class="n">km_to_mile</span>
 </pre></div>
@@ -11857,7 +11857,45 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#25105;&#20497;&#30340;&#21839;&#38988;&#65288;2&#65289;">&#25105;&#20497;&#30340;&#21839;&#38988;&#65288;2&#65289;<a class="anchor-link" href="#&#25105;&#20497;&#30340;&#21839;&#38988;&#65288;2&#65289;">&#182;</a></h2><ul>
 <li>Python 的 list 無法使用 <strong>element-wise</strong> 運算</li>
-<li>所以我們要倚賴 <strong>ndarray</strong> 解決問題</li>
+<li>在不引用套件的情況下我們可以使用 <code>迴圈</code> 來處理</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">km_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mf">42.195</span><span class="p">]</span>
+<span class="n">km_to_mile</span> <span class="o">=</span> <span class="mf">0.621371192</span>
+<span class="n">mile_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">km</span> <span class="ow">in</span> <span class="n">km_list</span><span class="p">:</span>
+    <span class="n">mile_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">km</span> <span class="o">*</span> <span class="n">km_to_mile</span><span class="p">)</span>
+
+<span class="n">mile_list</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#25105;&#20497;&#30340;&#21839;&#38988;&#65288;3&#65289;">&#25105;&#20497;&#30340;&#21839;&#38988;&#65288;3&#65289;<a class="anchor-link" href="#&#25105;&#20497;&#30340;&#21839;&#38988;&#65288;3&#65289;">&#182;</a></h2><ul>
+<li>Python 的 list 無法使用 <strong>element-wise</strong> 運算</li>
+<li>在不引用套件的情況下或者使用 <code>map()</code> 和 <code>lambda 函數</code> 來處理</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">km_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mf">42.195</span><span class="p">]</span>
+<span class="n">mile_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="mf">0.621371192</span><span class="p">,</span> <span class="n">km_list</span><span class="p">))</span>
+<span class="n">mile_list</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#25105;&#20497;&#30340;&#21839;&#38988;&#65288;4&#65289;">&#25105;&#20497;&#30340;&#21839;&#38988;&#65288;4&#65289;<a class="anchor-link" href="#&#25105;&#20497;&#30340;&#21839;&#38988;&#65288;4&#65289;">&#182;</a></h2><ul>
+<li>這樣處理會不會覺得太麻煩呢？</li>
 </ul>
 
 </div>
@@ -11870,7 +11908,7 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#31532;&#19968;&#27425;&#20351;&#29992;-ndarray">&#31532;&#19968;&#27425;&#20351;&#29992; ndarray<a class="anchor-link" href="#&#31532;&#19968;&#27425;&#20351;&#29992;-ndarray">&#182;</a></h2><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="c1"># 引入 numpy 套件</span>
 
-<span class="n">km_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="mf">42.195</span><span class="p">]</span>
+<span class="n">km_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mf">42.195</span><span class="p">]</span>
 <span class="n">km_array</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">km_list</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">km_array</span><span class="p">))</span>
 <span class="n">km_to_mile</span> <span class="o">=</span> <span class="mf">0.621371192</span>
@@ -11891,7 +11929,7 @@ a.anchor-link {
 </ul>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span> <span class="c1"># 引入 numpy 套件</span>
 
-<span class="n">km_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="mf">42.195</span><span class="p">]</span>
+<span class="n">km_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mf">42.195</span><span class="p">]</span>
 <span class="n">km_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">km_list</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">km_array</span><span class="p">))</span>
 <span class="n">km_to_mile</span> <span class="o">=</span> <span class="mf">0.621371192</span>
@@ -11907,7 +11945,22 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="ndarray-&#21482;&#33021;&#23481;&#35377;&#19968;&#20491;&#36039;&#26009;&#39006;&#22411;">ndarray &#21482;&#33021;&#23481;&#35377;&#19968;&#20491;&#36039;&#26009;&#39006;&#22411;<a class="anchor-link" href="#ndarray-&#21482;&#33021;&#23481;&#35377;&#19968;&#20491;&#36039;&#26009;&#39006;&#22411;">&#182;</a></h2><ul>
+<h2 id="&#32244;&#32722;&#35336;&#31639;-BMI">&#32244;&#32722;&#35336;&#31639; BMI<a class="anchor-link" href="#&#32244;&#32722;&#35336;&#31639;-BMI">&#182;</a></h2><ul>
+<li>請同學練習計算這五個人的 <a href="https://zh.wikipedia.org/wiki/身高體重指數">BMI</a></li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">heights</span> <span class="o">=</span> <span class="p">[</span><span class="mi">173</span><span class="p">,</span> <span class="mi">168</span><span class="p">,</span> <span class="mi">171</span><span class="p">,</span> <span class="mi">189</span><span class="p">,</span> <span class="mi">179</span><span class="p">]</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="p">[</span><span class="mf">65.4</span><span class="p">,</span> <span class="mf">59.2</span><span class="p">,</span> <span class="mf">63.6</span><span class="p">,</span> <span class="mf">88.4</span><span class="p">,</span> <span class="mf">68.7</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="ndarray-&#21482;&#33021;&#23481;&#35377;&#19968;&#20491;&#35722;&#25976;&#39006;&#22411;">ndarray &#21482;&#33021;&#23481;&#35377;&#19968;&#20491;&#35722;&#25976;&#39006;&#22411;<a class="anchor-link" href="#ndarray-&#21482;&#33021;&#23481;&#35377;&#19968;&#20491;&#35722;&#25976;&#39006;&#22411;">&#182;</a></h2><ul>
 <li>同時儲存有數值，布林值，會被自動轉換為數值</li>
 <li>同時儲存有數值，布林值與文字，會被自動轉換為文字</li>
 </ul>
@@ -11921,6 +11974,18 @@ a.anchor-link {
 
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="ndarray-&#21482;&#33021;&#23481;&#35377;&#19968;&#20491;&#35722;&#25976;&#39006;&#22411;&#65288;2&#65289;">ndarray &#21482;&#33021;&#23481;&#35377;&#19968;&#20491;&#35722;&#25976;&#39006;&#22411;&#65288;2&#65289;<a class="anchor-link" href="#ndarray-&#21482;&#33021;&#23481;&#35377;&#19968;&#20491;&#35722;&#25976;&#39006;&#22411;&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>請同學練習在 <code>ndarray</code> 中放入不同變數類型並且檢視他們的型別</li>
+</ul>
+
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -11929,16 +11994,40 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="ndarray-&#21487;&#20197;&#24314;&#31435;&#30697;&#38499;">ndarray &#21487;&#20197;&#24314;&#31435;&#30697;&#38499;<a class="anchor-link" href="#ndarray-&#21487;&#20197;&#24314;&#31435;&#30697;&#38499;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
-<span class="n">my_np_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="n">my_np_array</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">my_np_array</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span> <span class="c1"># 分隔一下</span>
-
 <span class="n">my_2d_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
                         <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
 <span class="k">print</span><span class="p">(</span><span class="n">my_2d_array</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">my_2d_array</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_2d_array</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># 矩陣也能完全適用 element-wise 運算</span>
 </pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="ndarray-&#21487;&#20197;&#24314;&#31435;&#30697;&#38499;&#65288;2&#65289;">ndarray &#21487;&#20197;&#24314;&#31435;&#30697;&#38499;&#65288;2&#65289;<a class="anchor-link" href="#ndarray-&#21487;&#20197;&#24314;&#31435;&#30697;&#38499;&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>可以使用 <code>.reshape()</code> 來改變 <code>ndarray</code> 的形狀</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="n">my_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_arr</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="ndarray-&#21487;&#20197;&#24314;&#31435;&#30697;&#38499;&#65288;3&#65289;">ndarray &#21487;&#20197;&#24314;&#31435;&#30697;&#38499;&#65288;3&#65289;<a class="anchor-link" href="#ndarray-&#21487;&#20197;&#24314;&#31435;&#30697;&#38499;&#65288;3&#65289;">&#182;</a></h2><ul>
+<li>請同學練習用兩種方法建立矩陣</li>
+</ul>
 
 </div>
 </div>
@@ -11970,6 +12059,18 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#36984;&#25799;-ndarray-&#30340;&#20803;&#32032;&#65288;2&#65289;">&#36984;&#25799; ndarray &#30340;&#20803;&#32032;&#65288;2&#65289;<a class="anchor-link" href="#&#36984;&#25799;-ndarray-&#30340;&#20803;&#32032;&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>請同學練習使用索引值選擇</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#36984;&#25799;-ndarray-&#30340;&#20803;&#32032;&#65288;3&#65289;">&#36984;&#25799; ndarray &#30340;&#20803;&#32032;&#65288;3&#65289;<a class="anchor-link" href="#&#36984;&#25799;-ndarray-&#30340;&#20803;&#32032;&#65288;3&#65289;">&#182;</a></h2><ul>
 <li>用布林值選擇</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -11985,6 +12086,18 @@ a.anchor-link {
 <span class="nb">filter</span> <span class="o">=</span> <span class="n">my_2d_array</span> <span class="o">&gt;=</span><span class="mi">2</span>
 <span class="k">print</span><span class="p">(</span><span class="n">my_2d_array</span><span class="p">[</span><span class="nb">filter</span><span class="p">])</span>
 </pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#36984;&#25799;-ndarray-&#30340;&#20803;&#32032;&#65288;4&#65289;">&#36984;&#25799; ndarray &#30340;&#20803;&#32032;&#65288;4&#65289;<a class="anchor-link" href="#&#36984;&#25799;-ndarray-&#30340;&#20803;&#32032;&#65288;4&#65289;">&#182;</a></h2><ul>
+<li>請同學練習從五人中選出 BMI &gt; 21 的元素</li>
+</ul>
 
 </div>
 </div>
