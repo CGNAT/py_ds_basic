@@ -11853,18 +11853,19 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#36039;&#26009;&#32080;&#27083;&#65288;2&#65289;">&#36039;&#26009;&#32080;&#27083;&#65288;2&#65289;<a class="anchor-link" href="#&#36039;&#26009;&#32080;&#27083;&#65288;2&#65289;">&#182;</a></h2><ul>
-<li>我們可以用兩種方法儲存 NBA 的組別資訊</li>
+<li>我們可以用兩種方法儲存星期的資訊</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="c1"># 方法一：客氣</span>
-<span class="n">nba_div_1</span> <span class="o">=</span> <span class="s2">&quot;大西洋組&quot;</span>
-<span class="n">nba_div_2</span> <span class="o">=</span> <span class="s2">&quot;中央組&quot;</span>
-<span class="n">nba_div_3</span> <span class="o">=</span> <span class="s2">&quot;東南組&quot;</span>
-<span class="n">nba_div_4</span> <span class="o">=</span> <span class="s2">&quot;西北組&quot;</span>
-<span class="n">nba_div_5</span> <span class="o">=</span> <span class="s2">&quot;太平洋組&quot;</span>
-<span class="n">nba_div_6</span> <span class="o">=</span> <span class="s2">&quot;西南組&quot;</span>
+<div class="highlight"><pre><span></span><span class="c1"># 方法一</span>
+<span class="n">sun</span> <span class="o">=</span> <span class="s2">&quot;Sunday&quot;</span>
+<span class="n">mon</span> <span class="o">=</span> <span class="s2">&quot;Monday&quot;</span>
+<span class="n">tue</span> <span class="o">=</span> <span class="s2">&quot;Tuesday&quot;</span>
+<span class="n">wed</span> <span class="o">=</span> <span class="s2">&quot;Wednesday&quot;</span>
+<span class="n">thu</span> <span class="o">=</span> <span class="s2">&quot;Thursday&quot;</span>
+<span class="n">fri</span> <span class="o">=</span> <span class="s2">&quot;Friday&quot;</span>
+<span class="n">sat</span> <span class="o">=</span> <span class="s2">&quot;Saturday&quot;</span>
 
-<span class="c1"># 方法二：善用</span>
-<span class="n">nba_divs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;大西洋組&quot;</span><span class="p">,</span> <span class="s2">&quot;中央組&quot;</span><span class="p">,</span> <span class="s2">&quot;東南組&quot;</span><span class="p">,</span> <span class="s2">&quot;西北組&quot;</span><span class="p">,</span> <span class="s2">&quot;太平洋組&quot;</span><span class="p">,</span> <span class="s2">&quot;西南組&quot;</span><span class="p">]</span>
+<span class="c1"># 方法二</span>
+<span class="n">week_days</span> <span class="o">=</span> <span class="p">[</span><span class="n">sun</span><span class="p">,</span> <span class="n">mon</span><span class="p">,</span> <span class="n">tue</span><span class="p">,</span> <span class="n">wed</span><span class="p">,</span> <span class="n">thu</span><span class="p">,</span> <span class="n">fri</span><span class="p">,</span> <span class="n">sat</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -11876,16 +11877,22 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#25105;&#20497;&#35201;&#35611;&#21738;&#20123;&#36039;&#26009;&#32080;&#27083;">&#25105;&#20497;&#35201;&#35611;&#21738;&#20123;&#36039;&#26009;&#32080;&#27083;<a class="anchor-link" href="#&#25105;&#20497;&#35201;&#35611;&#21738;&#20123;&#36039;&#26009;&#32080;&#27083;">&#182;</a></h2><ul>
+<li>Python 原生資料結構<ul>
 <li>list</li>
 <li>tuple</li>
 <li>dict</li>
+</ul>
+</li>
+<li>套件資料結構<ul>
 <li>ndarray</li>
 <li>data frame</li>
+</ul>
+</li>
 </ul>
 
 </div>
 </div>
-</div></section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11896,24 +11903,31 @@ a.anchor-link {
 <li>可以容納不同的變數類型（str, int, float, bool）</li>
 <li>Python 的索引值從 0 開始算</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="c1"># as of 2016-12-13</span>
-<span class="n">team_name</span> <span class="o">=</span> <span class="s2">&quot;金州勇士隊&quot;</span>
-<span class="n">wins</span> <span class="o">=</span> <span class="mi">21</span>
-<span class="n">losses</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">win_percentage</span> <span class="o">=</span> <span class="mf">0.84</span>
-<span class="n">is_on_winning_streak</span> <span class="o">=</span> <span class="bp">True</span>
+<div class="highlight"><pre><span></span><span class="n">team_name</span> <span class="o">=</span> <span class="s2">&quot;Chicago Bulls&quot;</span>
+<span class="n">wins</span> <span class="o">=</span> <span class="mi">72</span>
+<span class="n">losses</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">win_percentage</span> <span class="o">=</span> <span class="n">wins</span> <span class="o">/</span> <span class="p">(</span><span class="n">wins</span> <span class="o">+</span> <span class="n">losses</span><span class="p">)</span>
+<span class="n">is_champion</span> <span class="o">=</span> <span class="bp">True</span>
 
-<span class="n">golden_state_warriors</span> <span class="o">=</span> <span class="p">[</span><span class="n">team_name</span><span class="p">,</span> <span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">win_percentage</span><span class="p">,</span> <span class="n">is_on_winning_streak</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">golden_state_warriors</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">golden_state_warriors</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">golden_state_warriors</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">golden_state_warriors</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">golden_state_warriors</span><span class="p">[</span><span class="mi">4</span><span class="p">]))</span>
+<span class="n">chicago_bulls</span> <span class="o">=</span> <span class="p">[</span><span class="n">team_name</span><span class="p">,</span> <span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">win_percentage</span><span class="p">,</span> <span class="n">is_champion</span><span class="p">]</span>
 </pre></div>
 
 </div>
 </div>
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="list&#65288;2&#65289;">list&#65288;2&#65289;<a class="anchor-link" href="#list&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>請同學練習判斷 <code>chicago_bulls</code> 的結構</li>
+<li>請同學練習判斷 <code>chicago_bulls</code> 裡面元素的變數類型</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11923,15 +11937,16 @@ a.anchor-link {
 <li>跟 list 很像，但是我們不能新增，刪除或者更新 tuple 的元素</li>
 <li>建立時使用 <code>()</code> 小括號或者使用 <code>tuple()</code> 函數轉換既有的 list</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="n">nba_divs_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;大西洋組&quot;</span><span class="p">,</span> <span class="s2">&quot;中央組&quot;</span><span class="p">,</span> <span class="s2">&quot;東南組&quot;</span><span class="p">,</span> <span class="s2">&quot;西北組&quot;</span><span class="p">,</span> <span class="s2">&quot;太平洋組&quot;</span><span class="p">]</span>
-<span class="n">nba_divs_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;大西洋組&quot;</span><span class="p">,</span> <span class="s2">&quot;中央組&quot;</span><span class="p">,</span> <span class="s2">&quot;東南組&quot;</span><span class="p">,</span> <span class="s2">&quot;西北組&quot;</span><span class="p">,</span> <span class="s2">&quot;太平洋組&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">team_name</span> <span class="o">=</span> <span class="s2">&quot;Chicago Bulls&quot;</span>
+<span class="n">wins</span> <span class="o">=</span> <span class="mi">72</span>
+<span class="n">losses</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">win_percentage</span> <span class="o">=</span> <span class="n">wins</span> <span class="o">/</span> <span class="p">(</span><span class="n">wins</span> <span class="o">+</span> <span class="n">losses</span><span class="p">)</span>
+<span class="n">is_champion</span> <span class="o">=</span> <span class="bp">True</span>
 
-<span class="n">nba_divs_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;西南組&quot;</span><span class="p">)</span>
-<span class="n">nba_divs_tuple</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;西南組&quot;</span><span class="p">)</span>
+<span class="n">chicago_bulls_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">team_name</span><span class="p">,</span> <span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">win_percentage</span><span class="p">,</span> <span class="n">is_champion</span><span class="p">]</span>
+<span class="n">chicago_bulls_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="n">team_name</span><span class="p">,</span> <span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">win_percentage</span><span class="p">,</span> <span class="n">is_champion</span><span class="p">)</span>
+<span class="c1"># chicago_bulls_tuple = tuple(chicago_bulls_list)</span>
 </pre></div>
-<ul>
-<li>如果對於使用 <code>.insert()</code> 的寫法感到陌生，請暫時先不要理會它</li>
-</ul>
 
 </div>
 </div>
@@ -11941,32 +11956,53 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="tuple&#65288;2&#65289;">tuple&#65288;2&#65289;<a class="anchor-link" href="#tuple&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>請同學練習用兩種方法建立 tuple</li>
+<li>請同學使用 <code>.append()</code> 的方法為 list 與 tuple 加入元素 <code>season = "1995-96"</code></li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">season</span> <span class="o">=</span> <span class="s2">&quot;1995-96&quot;</span>
+<span class="n">chicago_bulls_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">season</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="dict">dict<a class="anchor-link" href="#dict">&#182;</a></h2><ul>
 <li>帶有鍵值（key）的 list</li>
 <li>建立時使用大括號 <code>{}</code> 或者使用 <code>dict()</code> 函數轉換既有的 list</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="c1"># as of 2016-12-13</span>
-<span class="n">team_name</span> <span class="o">=</span> <span class="s2">&quot;金州勇士隊&quot;</span>
-<span class="n">wins</span> <span class="o">=</span> <span class="mi">21</span>
-<span class="n">losses</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">win_percentage</span> <span class="o">=</span> <span class="mf">0.84</span>
-<span class="n">is_on_winning_streak</span> <span class="o">=</span> <span class="bp">True</span>
+<div class="highlight"><pre><span></span><span class="n">team_name</span> <span class="o">=</span> <span class="s2">&quot;Chicago Bulls&quot;</span>
+<span class="n">wins</span> <span class="o">=</span> <span class="mi">72</span>
+<span class="n">losses</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">win_percentage</span> <span class="o">=</span> <span class="n">wins</span> <span class="o">/</span> <span class="p">(</span><span class="n">wins</span> <span class="o">+</span> <span class="n">losses</span><span class="p">)</span>
+<span class="n">is_champion</span> <span class="o">=</span> <span class="bp">True</span>
 
-<span class="n">golden_state_warriors</span> <span class="o">=</span> <span class="p">{</span>
+<span class="n">chicago_bulls</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;team_name&quot;</span><span class="p">:</span> <span class="n">team_name</span><span class="p">,</span>
     <span class="s2">&quot;wins&quot;</span><span class="p">:</span> <span class="n">wins</span><span class="p">,</span>
     <span class="s2">&quot;losses&quot;</span><span class="p">:</span> <span class="n">losses</span><span class="p">,</span>
     <span class="s2">&quot;win_percentage&quot;</span><span class="p">:</span> <span class="n">win_percentage</span><span class="p">,</span>
-    <span class="s2">&quot;is_on_winning_streak&quot;</span><span class="p">:</span> <span class="n">is_on_winning_streak</span>
+    <span class="s2">&quot;is_champion&quot;</span><span class="p">:</span> <span class="n">is_champion</span>
 <span class="p">}</span>
-
-<span class="c1"># 利用鍵值選擇元素</span>
-<span class="k">print</span><span class="p">(</span><span class="n">golden_state_warriors</span><span class="p">[</span><span class="s2">&quot;team_name&quot;</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="n">golden_state_warriors</span><span class="p">[</span><span class="s2">&quot;wins&quot;</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="n">golden_state_warriors</span><span class="p">[</span><span class="s2">&quot;losses&quot;</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="n">golden_state_warriors</span><span class="p">[</span><span class="s2">&quot;win_percentage&quot;</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="n">golden_state_warriors</span><span class="p">[</span><span class="s2">&quot;is_on_winning_streak&quot;</span><span class="p">])</span>
 </pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="dict&#65288;2&#65289;">dict&#65288;2&#65289;<a class="anchor-link" href="#dict&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>請同學練習使用鍵值選取字典中的元素</li>
+<li>請同學判斷字典中元素的變數類型</li>
+</ul>
 
 </div>
 </div>
