@@ -11841,7 +11841,7 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#31532;&#19968;&#20491;-pandas-data-frame">&#31532;&#19968;&#20491; pandas data frame<a class="anchor-link" href="#&#31532;&#19968;&#20491;-pandas-data-frame">&#182;</a></h2><ul>
 <li>還記得 <strong>dict</strong> 這個資料結構嗎？</li>
-<li>將一個 <strong>dict</strong> 的資料結構轉換為 data frame 是最方便的方法</li>
+<li>將一個 <strong>dict</strong> 的資料結構轉換為 <strong>data frame</strong> 是最方便的方法</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> <span class="c1"># 引用套件並縮寫為 pd</span>
 
@@ -11859,6 +11859,20 @@ a.anchor-link {
 
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#31532;&#19968;&#20491;-pandas-data-frame&#65288;2&#65289;">&#31532;&#19968;&#20491; pandas data frame&#65288;2&#65289;<a class="anchor-link" href="#&#31532;&#19968;&#20491;-pandas-data-frame&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>請同學練習建立一個 <strong>dict</strong></li>
+<li>練習將 <strong>dict</strong> 轉換成 <strong>data frame</strong></li>
+<li>利用 <code>type()</code> 檢查 <strong>data frame</strong></li>
+</ul>
+
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -11866,7 +11880,7 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Data-frame-&#30340;&#29305;&#24615;">Data frame &#30340;&#29305;&#24615;<a class="anchor-link" href="#Data-frame-&#30340;&#29305;&#24615;">&#182;</a></h2><ul>
-<li>包含多種資料類型，不會像 ndarray 僅容納單一資料類型</li>
+<li>包含多種變數類型，不像 ndarray 僅容納單一變數類型</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> <span class="c1"># 引用套件並縮寫為 pd</span>
 
@@ -11879,8 +11893,8 @@ a.anchor-link {
                   <span class="s2">&quot;is_male&quot;</span><span class="p">:</span> <span class="n">is_male</span>
 <span class="p">}</span>
 
-<span class="n">straw_hat_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">straw_hat_df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+<span class="n">straw_hat_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;is_male&quot;</span><span class="p">])</span> <span class="c1"># 指定欄位順序</span>
+<span class="n">straw_hat_df</span><span class="o">.</span><span class="n">dtypes</span>
 </pre></div>
 
 </div>
@@ -11892,6 +11906,19 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Data-frame-&#30340;&#29305;&#24615;&#65288;2&#65289;">Data frame &#30340;&#29305;&#24615;&#65288;2&#65289;<a class="anchor-link" href="#Data-frame-&#30340;&#29305;&#24615;&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>請同學建立一個擁有 <code>str</code>、<code>bool</code> 與數值的 data frame</li>
+<li>利用 <code>.dtypes</code> 屬性看看各個欄位的變數類型</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-frame-&#30340;&#29305;&#24615;&#65288;3&#65289;">Data frame &#30340;&#29305;&#24615;&#65288;3&#65289;<a class="anchor-link" href="#Data-frame-&#30340;&#29305;&#24615;&#65288;3&#65289;">&#182;</a></h2><ul>
 <li>同樣使用中括號 <code>[]</code> 選擇元素</li>
 <li>使用 <code>.ix</code> 屬性</li>
 </ul>
@@ -11923,7 +11950,19 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-frame-&#30340;&#29305;&#24615;&#65288;3&#65289;">Data frame &#30340;&#29305;&#24615;&#65288;3&#65289;<a class="anchor-link" href="#Data-frame-&#30340;&#29305;&#24615;&#65288;3&#65289;">&#182;</a></h2><ul>
+<h2 id="Data-frame-&#30340;&#29305;&#24615;&#65288;4&#65289;">Data frame &#30340;&#29305;&#24615;&#65288;4&#65289;<a class="anchor-link" href="#Data-frame-&#30340;&#29305;&#24615;&#65288;4&#65289;">&#182;</a></h2><ul>
+<li>請同學練習使用中括號 <code>.ix</code> 與 <code>[]</code> 選擇 row、column 與元素</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-frame-&#30340;&#29305;&#24615;&#65288;5&#65289;">Data frame &#30340;&#29305;&#24615;&#65288;5&#65289;<a class="anchor-link" href="#Data-frame-&#30340;&#29305;&#24615;&#65288;5&#65289;">&#182;</a></h2><ul>
 <li>可以使用布林值篩選</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> <span class="c1"># 引用套件並縮寫為 pd</span>
@@ -11947,6 +11986,22 @@ a.anchor-link {
 <span class="nb">filter</span> <span class="o">=</span> <span class="n">straw_hat_df</span><span class="o">.</span><span class="n">ix</span><span class="p">[:,</span> <span class="s2">&quot;is_male&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="bp">False</span>
 <span class="n">straw_hat_df</span><span class="p">[</span><span class="nb">filter</span><span class="p">]</span>
 </pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-frame-&#30340;&#29305;&#24615;&#65288;6&#65289;">Data frame &#30340;&#29305;&#24615;&#65288;6&#65289;<a class="anchor-link" href="#Data-frame-&#30340;&#29305;&#24615;&#65288;6&#65289;">&#182;</a></h2><ul>
+<li>請同學練習使用布林值篩選出草帽海賊團的熟男：<ul>
+<li><code>age</code> &gt;= 30</li>
+<li><code>is_male</code> == True</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
@@ -11978,8 +12033,24 @@ a.anchor-link {
 <span class="k">print</span><span class="p">(</span><span class="n">straw_hat_df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span> <span class="c1"># 回傳後三筆觀測值</span>
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">straw_hat_df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="c1"># 回傳欄位名稱</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">straw_hat_df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span> <span class="c1"># 回傳索引值</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20102;&#35299;-data-frame-&#30340;&#27010;&#35264;&#65288;2&#65289;">&#20102;&#35299; data frame &#30340;&#27010;&#35264;&#65288;2&#65289;<a class="anchor-link" href="#&#20102;&#35299;-data-frame-&#30340;&#27010;&#35264;&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>請同學練習 <strong>data frame</strong> 的 <code>shape</code> 與 <code>columns</code> 屬性</li>
+<li>練習 <strong>data frame</strong> 的 <code>describe()</code>、<code>head()</code> 與 <code>tail()</code> 方法</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://storage.googleapis.com/py_ds_basic/iris.csv&quot;</span> <span class="c1"># 在雲端上儲存了一份 csv 檔案</span>
+<span class="n">iris_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 </pre></div>
 
 </div>
