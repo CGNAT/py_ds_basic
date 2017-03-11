@@ -12133,6 +12133,198 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21512;&#20341;">&#21512;&#20341;<a class="anchor-link" href="#&#21512;&#20341;">&#182;</a></h2><ul>
+<li><code>pandas.concat()</code> 方法</li>
+<li>練習將 <code>straw_hat_sub_df_1</code> 與 <code>straw_hat_sub_df_2</code> 水平合併起來</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> <span class="c1"># 引用套件並縮寫為 pd</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span> <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">]</span>
+<span class="n">age</span> <span class="o">=</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<span class="n">is_male</span> <span class="o">=</span> <span class="p">[</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">]</span>
+
+<span class="n">straw_hat_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+                  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span>
+                  <span class="s2">&quot;is_male&quot;</span><span class="p">:</span> <span class="n">is_male</span>
+<span class="p">}</span>
+
+<span class="n">straw_hat_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">)</span>
+
+<span class="n">straw_hat_sub_df_1</span> <span class="o">=</span> <span class="n">straw_hat_df</span><span class="o">.</span><span class="n">ix</span><span class="p">[:,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="s2">&quot;is_male&quot;</span><span class="p">]</span>
+<span class="n">straw_hat_sub_df_2</span> <span class="o">=</span> <span class="n">straw_hat_df</span><span class="o">.</span><span class="n">ix</span><span class="p">[:,</span> <span class="s2">&quot;name&quot;</span><span class="p">]</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">___</span><span class="p">,</span> <span class="n">___</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21512;&#20341;&#65288;2&#65289;">&#21512;&#20341;&#65288;2&#65289;<a class="anchor-link" href="#&#21512;&#20341;&#65288;2&#65289;">&#182;</a></h2><ul>
+<li><code>pandas.concat()</code> 方法</li>
+<li>練習將 <code>straw_hat_sub_df_1</code> 與 <code>straw_hat_sub_df_2</code> 垂直合併起來</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> <span class="c1"># 引用套件並縮寫為 pd</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span> <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">]</span>
+<span class="n">age</span> <span class="o">=</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<span class="n">is_male</span> <span class="o">=</span> <span class="p">[</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">]</span>
+
+<span class="n">straw_hat_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+                  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span>
+                  <span class="s2">&quot;is_male&quot;</span><span class="p">:</span> <span class="n">is_male</span>
+<span class="p">}</span>
+
+<span class="n">straw_hat_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">)</span>
+
+<span class="n">straw_hat_sub_df_1</span> <span class="o">=</span> <span class="n">straw_hat_df</span><span class="o">.</span><span class="n">ix</span><span class="p">[:</span><span class="mi">4</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">straw_hat_sub_df_2</span> <span class="o">=</span> <span class="n">straw_hat_df</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="mi">5</span><span class="p">:,</span> <span class="p">:]</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">___</span><span class="p">,</span> <span class="n">___</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21512;&#20341;&#65288;3&#65289;">&#21512;&#20341;&#65288;3&#65289;<a class="anchor-link" href="#&#21512;&#20341;&#65288;3&#65289;">&#182;</a></h2><ul>
+<li>Inner Join</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> <span class="c1"># 引用套件並縮寫為 pd</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span> <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">]</span>
+<span class="n">age</span> <span class="o">=</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<span class="n">straw_hat_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="n">age</span>
+<span class="p">}</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">,</span> <span class="s2">&quot;Trafalgar D. Water Law&quot;</span><span class="p">]</span>
+<span class="n">devil_fruit</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Gum-Gum Fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;Human-Human Fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;Hana-Hana Fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;Revive-Revive Fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;Op-Op Fruit&quot;</span><span class="p">]</span>
+<span class="n">devil_fruit_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+    <span class="s2">&quot;devil_fruit&quot;</span><span class="p">:</span> <span class="n">devil_fruit</span>
+<span class="p">}</span>
+
+<span class="n">straw_hat_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">)</span>
+<span class="n">devil_fruit_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">devil_fruit_dict</span><span class="p">)</span>
+<span class="n">inner_joined</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">straw_hat_df</span><span class="p">,</span> <span class="n">devil_fruit_df</span><span class="p">)</span>
+<span class="n">inner_joined</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21512;&#20341;&#65288;4&#65289;">&#21512;&#20341;&#65288;4&#65289;<a class="anchor-link" href="#&#21512;&#20341;&#65288;4&#65289;">&#182;</a></h2><ul>
+<li>Left Outer Join</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> <span class="c1"># 引用套件並縮寫為 pd</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span> <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">]</span>
+<span class="n">age</span> <span class="o">=</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<span class="n">straw_hat_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="n">age</span>
+<span class="p">}</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">,</span> <span class="s2">&quot;Trafalgar D. Water Law&quot;</span><span class="p">]</span>
+<span class="n">devil_fruit</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Gum-Gum Fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;Human-Human Fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;Hana-Hana Fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;Revive-Revive Fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;Op-Op Fruit&quot;</span><span class="p">]</span>
+<span class="n">devil_fruit_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+    <span class="s2">&quot;devil_fruit&quot;</span><span class="p">:</span> <span class="n">devil_fruit</span>
+<span class="p">}</span>
+
+<span class="n">straw_hat_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">)</span>
+<span class="n">devil_fruit_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">devil_fruit_dict</span><span class="p">)</span>
+<span class="n">left_joined</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">straw_hat_df</span><span class="p">,</span> <span class="n">devil_fruit_df</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<span class="n">left_joined</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21512;&#20341;&#65288;5&#65289;">&#21512;&#20341;&#65288;5&#65289;<a class="anchor-link" href="#&#21512;&#20341;&#65288;5&#65289;">&#182;</a></h2><ul>
+<li>Right Outer Join</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> <span class="c1"># 引用套件並縮寫為 pd</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span> <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">]</span>
+<span class="n">age</span> <span class="o">=</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<span class="n">straw_hat_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="n">age</span>
+<span class="p">}</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">,</span> <span class="s2">&quot;Trafalgar D. Water Law&quot;</span><span class="p">]</span>
+<span class="n">devil_fruit</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Gum-Gum Fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;Human-Human Fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;Hana-Hana Fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;Revive-Revive Fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;Op-Op Fruit&quot;</span><span class="p">]</span>
+<span class="n">devil_fruit_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+    <span class="s2">&quot;devil_fruit&quot;</span><span class="p">:</span> <span class="n">devil_fruit</span>
+<span class="p">}</span>
+
+<span class="n">straw_hat_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">)</span>
+<span class="n">devil_fruit_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">devil_fruit_dict</span><span class="p">)</span>
+<span class="n">right_joined</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">straw_hat_df</span><span class="p">,</span> <span class="n">devil_fruit_df</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s2">&quot;right&quot;</span><span class="p">)</span>
+<span class="n">right_joined</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21512;&#20341;&#65288;6&#65289;">&#21512;&#20341;&#65288;6&#65289;<a class="anchor-link" href="#&#21512;&#20341;&#65288;6&#65289;">&#182;</a></h2><ul>
+<li>Full Outer Join</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> <span class="c1"># 引用套件並縮寫為 pd</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Roronoa Zoro&quot;</span><span class="p">,</span> <span class="s2">&quot;Nami&quot;</span><span class="p">,</span> <span class="s2">&quot;Usopp&quot;</span><span class="p">,</span> <span class="s2">&quot;Vinsmoke Sanji&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Franky&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">]</span>
+<span class="n">age</span> <span class="o">=</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<span class="n">straw_hat_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="n">age</span>
+<span class="p">}</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Monkey D. Luffy&quot;</span><span class="p">,</span> <span class="s2">&quot;Tony Tony Chopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Nico Robin&quot;</span><span class="p">,</span> <span class="s2">&quot;Brook&quot;</span><span class="p">,</span> <span class="s2">&quot;Trafalgar D. Water Law&quot;</span><span class="p">]</span>
+<span class="n">devil_fruit</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Gum-Gum Fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;Human-Human Fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;Hana-Hana Fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;Revive-Revive Fruit&quot;</span><span class="p">,</span> <span class="s2">&quot;Op-Op Fruit&quot;</span><span class="p">]</span>
+<span class="n">devil_fruit_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+    <span class="s2">&quot;devil_fruit&quot;</span><span class="p">:</span> <span class="n">devil_fruit</span>
+<span class="p">}</span>
+
+<span class="n">straw_hat_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">)</span>
+<span class="n">devil_fruit_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">devil_fruit_dict</span><span class="p">)</span>
+<span class="n">full_joined</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">straw_hat_df</span><span class="p">,</span> <span class="n">devil_fruit_df</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s2">&quot;outer&quot;</span><span class="p">)</span>
+<span class="n">full_joined</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#24310;&#20280;&#38321;&#35712;">&#24310;&#20280;&#38321;&#35712;<a class="anchor-link" href="#&#24310;&#20280;&#38321;&#35712;">&#182;</a></h2><ul>
 <li><a href="http://pandas.pydata.org/pandas-docs/stable/io.html">Pandas IO Tools</a></li>
 <li><a href="http://pandas.pydata.org/pandas-docs/stable/10min.html">10 Minutes to pandas</a></li>
