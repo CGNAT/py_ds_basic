@@ -11876,7 +11876,7 @@ a.anchor-link {
 <h2 id="&#20839;&#24314;&#20989;&#25976;&#65288;2&#65289;">&#20839;&#24314;&#20989;&#25976;&#65288;2&#65289;<a class="anchor-link" href="#&#20839;&#24314;&#20989;&#25976;&#65288;2&#65289;">&#182;</a></h2><ul>
 <li>更多內建函數：</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="n">distances</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mf">42.125</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><span class="n">distances</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mf">42.125</span><span class="p">]</span>
 
 <span class="c1"># 應用函數</span>
 <span class="k">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">distances</span><span class="p">))</span> <span class="c1"># 最長的距離</span>
@@ -11961,115 +11961,6 @@ a.anchor-link {
 
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#33258;&#35330;&#20989;&#25976;&#65288;4&#65289;">&#33258;&#35330;&#20989;&#25976;&#65288;4&#65289;<a class="anchor-link" href="#&#33258;&#35330;&#20989;&#25976;&#65288;4&#65289;">&#182;</a></h2><ul>
-<li>交換排序法（exchange sorting）</li>
-</ul>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> <span class="c1"># 呼叫函數時使用隨機整數</span>
-
-<span class="c1"># 定義自訂函數</span>
-<span class="k">def</span> <span class="nf">exchange_sort</span><span class="p">(</span><span class="n">input_list</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="bp">False</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39; # 多行的 docstrings</span>
-<span class="sd">    依據輸入的 list 與 reverse 參數排序 list 中的數字後回傳。</span>
-<span class="sd">    reverse 參數預設為 False 遞增排序，可以修改為 True 遞減排序。</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">input_list_cloned</span> <span class="o">=</span> <span class="n">input_list</span>
-    <span class="c1"># 遞增排序</span>
-    <span class="k">if</span> <span class="n">reverse</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)):</span>
-                <span class="c1"># 如果前一個數字比後一個數字大則交換位置</span>
-                <span class="k">if</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-                    <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="c1"># 遞減排序</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)):</span>
-                <span class="c1"># 如果前一個數字比後一個數字小則交換位置</span>
-                <span class="k">if</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-                    <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">input_list_cloned</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">input_list_cloned</span>
-
-<span class="c1"># 呼叫自訂函數</span>
-<span class="n">my_list</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span> <span class="c1"># 產生一組隨機數</span>
-<span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="c1"># 看看未排序前</span>
-<span class="k">print</span><span class="p">(</span><span class="n">exchange_sort</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span> <span class="c1"># 預設遞增排序</span>
-<span class="k">print</span><span class="p">(</span><span class="n">exchange_sort</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="bp">True</span><span class="p">))</span> <span class="c1"># 指定參數遞減排序</span>
-</pre></div>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#24034;&#29376;&#20989;&#25976;">&#24034;&#29376;&#20989;&#25976;<a class="anchor-link" href="#&#24034;&#29376;&#20989;&#25976;">&#182;</a></h2><ul>
-<li>在函數裡面嵌入函數</li>
-<li>舉例來說一個計算平均數的函數裡面應該要包含兩個函數：<ul>
-<li>一個是計算總和的函數 <code>my_sum()</code></li>
-<li>一個是計算個數的函數 <code>my_length()</code></li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><span class="c1"># 定義自訂函數</span>
-<span class="k">def</span> <span class="nf">my_mean</span><span class="p">(</span><span class="n">input_list</span><span class="p">):</span>
-    <span class="s1">&#39;計算平均數&#39;</span> <span class="c1"># docstrings</span>
-    <span class="k">def</span> <span class="nf">my_sum</span><span class="p">(</span><span class="n">input_list</span><span class="p">):</span>
-        <span class="s1">&#39;計算總和&#39;</span>
-        <span class="n">temp_sum</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">input_list</span><span class="p">:</span>
-            <span class="n">temp_sum</span> <span class="o">+=</span> <span class="n">i</span>
-        <span class="k">return</span> <span class="n">temp_sum</span>
-    <span class="k">def</span> <span class="nf">my_length</span><span class="p">(</span><span class="n">input_list</span><span class="p">):</span>
-        <span class="s1">&#39;計算個數&#39;</span>
-        <span class="n">temp_length</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">input_list</span><span class="p">:</span>
-            <span class="n">temp_length</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">return</span> <span class="n">temp_length</span>
-    <span class="k">return</span> <span class="n">my_sum</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span> <span class="o">/</span> <span class="n">my_length</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span>
-
-<span class="c1"># 呼叫自訂函數</span>
-<span class="n">one_to_10</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">my_mean</span><span class="p">(</span><span class="n">one_to_10</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#37679;&#35492;&#34389;&#29702;">&#37679;&#35492;&#34389;&#29702;<a class="anchor-link" href="#&#37679;&#35492;&#34389;&#29702;">&#182;</a></h2><ul>
-<li>Python 使用 <code>try - except</code> 的語法結構進行錯誤處理</li>
-</ul>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="c1"># 要使用 pi 得引入套件 math</span>
-
-<span class="c1"># 定義自訂函數</span>
-<span class="k">def</span> <span class="nf">circle_calculate</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
-    <span class="s1">&#39;依據輸入的半徑同時計算並回傳圓形的面積或周長&#39;</span> <span class="c1"># 單行的 docstring</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">circle_area</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span><span class="o">**</span><span class="mi">2</span>
-        <span class="n">circle_circum</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span>
-        <span class="k">return</span> <span class="n">circle_area</span><span class="p">,</span> <span class="n">circle_circum</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;請輸入數值。&quot;</span><span class="p">)</span>
-
-<span class="c1"># 呼叫自訂函數</span>
-<span class="n">my_radius</span> <span class="o">=</span> <span class="s2">&quot;3&quot;</span>
-<span class="n">circle_calculate</span><span class="p">(</span><span class="n">my_radius</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -12077,20 +11968,15 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#26399;&#20013;&#20316;&#26989;">&#26399;&#20013;&#20316;&#26989;<a class="anchor-link" href="#&#26399;&#20013;&#20316;&#26989;">&#182;</a></h2><ul>
-<li>自訂函數：計算一組數字的標準差</li>
-<li>將函數的程式碼 <code>my_sd_function.py</code> 上傳至 GitHub</li>
-<li>標準差公式：</li>
-</ul>
-$$SD = \sqrt{\frac{1}{N}\sum_{i=1}^{N}(x_i - \mu)^2}$$<ul>
-<li>作業參考連結：<ul>
-<li><a href="https://docs.scipy.org/doc/numpy-1.10.1/reference/generated/numpy.mean.html">numpy.mean</a></li>
-<li><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.sum.html">numpy.sum</a></li>
-<li><a href="https://docs.python.org/2/library/math.html">math.sqrt</a></li>
-<li><a href="https://zh.wikipedia.org/zh-tw/%E6%A8%99%E6%BA%96%E5%B7%AE">標準差</a></li>
+<li>自訂一個計算平均數的函數</li>
+<li>裡面應該要包含兩個函數：<ul>
+<li>一個是計算總和的函數</li>
+<li>一個是計算個數的函數</li>
+<li>然後將總和除以個數的結果輸出</li>
 </ul>
 </li>
 </ul>
-
+$$\bar{x} = \frac{\sum_{i = 1}^{n}x_i}{n}$$
 </div>
 </div>
 </div></section></section>
