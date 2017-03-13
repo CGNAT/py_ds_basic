@@ -11919,7 +11919,9 @@ a.anchor-link {
 
 <span class="c1"># 定義自訂函數</span>
 <span class="k">def</span> <span class="nf">circle_calculate</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="n">area</span> <span class="o">=</span> <span class="bp">True</span><span class="p">):</span>
-    <span class="s1">&#39;依據輸入的半徑與 area 參數計算圓形的面積或周長&#39;</span> <span class="c1"># 單行的 docstring</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    依據輸入的半徑與 area 參數計算圓形的面積或周長</span>
+<span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">circle_area</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span><span class="o">**</span><span class="mi">2</span>
     <span class="n">circle_circum</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span>
     <span class="k">if</span> <span class="n">area</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
@@ -11949,7 +11951,9 @@ a.anchor-link {
 
 <span class="c1"># 定義自訂函數</span>
 <span class="k">def</span> <span class="nf">circle_calculate</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
-    <span class="s1">&#39;依據輸入的半徑同時計算並回傳圓形的面積或周長&#39;</span> <span class="c1"># 單行的 docstring</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    依據輸入的半徑同時計算並回傳圓形的面積或周長</span>
+<span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">circle_area</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span><span class="o">**</span><span class="mi">2</span>
     <span class="n">circle_circum</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span>
     <span class="k">return</span> <span class="n">circle_area</span><span class="p">,</span> <span class="n">circle_circum</span>
@@ -11969,9 +11973,9 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#26399;&#20013;&#20316;&#26989;">&#26399;&#20013;&#20316;&#26989;<a class="anchor-link" href="#&#26399;&#20013;&#20316;&#26989;">&#182;</a></h2><ul>
 <li>自訂一個計算平均數的函數</li>
-<li>裡面應該要包含兩個函數：<ul>
-<li>一個是計算總和的函數</li>
-<li>一個是計算個數的函數</li>
+<li>裡面應該要包含兩個功能：<ul>
+<li>一個是計算總和的功能</li>
+<li>一個是計算個數的功能</li>
 <li>然後將總和除以個數的結果輸出</li>
 </ul>
 </li>
