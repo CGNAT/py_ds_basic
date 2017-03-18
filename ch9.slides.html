@@ -11854,8 +11854,10 @@ a.anchor-link {
 
 <span class="c1"># 建立 data frame</span>
 <span class="n">straw_hat_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">straw_hat_dict</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">straw_hat_df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span> <span class="c1"># straw_hat_df 有 dtypes 屬性</span>
-<span class="k">print</span><span class="p">(</span><span class="n">straw_hat</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span> <span class="c1"># straw_hat_df 有 head 方法</span>
+
+<span class="c1"># data frame 的屬性與方法</span>
+<span class="k">print</span><span class="p">(</span><span class="n">straw_hat_df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># shape 屬性</span>
+<span class="n">straw_hat_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># head 方法</span>
 </pre></div>
 
 </div>
